@@ -13,14 +13,14 @@ namespace FindMyPastTest
             Console.Write("How many prime number do you want to generate: ");
             string numberText = Console.ReadLine();
             int number;
-            while (!int.TryParse(numberText, out number))
+            while (!int.TryParse(numberText, out number) || number < 1)
             {
-                Console.Write("Invalid format. Try again: ");
+                Console.Write("Invalid format or incorrect number. Try again: ");
                 numberText = Console.ReadLine();
             }
 
             var generator = new PrimeNumberGenerator();
-            var table = new MultiplicationTable(generator.Generate().Take(number).ToArray());
+            var table = new MultiplicationTable(generator.Generate().Take(Math.Min(10, number)).ToArray());
             var writer = new MultiplicationTableWriter();
             writer.Write(Console.Out, table);
 
