@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MultiplicationTable.cs" />
+    <Compile Include="MultiplicationTableWriter.cs" />
     <Compile Include="PrimeNumberGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
