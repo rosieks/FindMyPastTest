@@ -10,7 +10,7 @@ namespace FindMyPastTest
         {
         }
 
-        public void Write(StringWriter textWriter, MultiplicationTable multiplicationTable)
+        public void Write(TextWriter textWriter, MultiplicationTable multiplicationTable)
         {
             int maxNumber = multiplicationTable[multiplicationTable.Header.Length - 1, multiplicationTable.Header.Length - 1];
             int width = maxNumber.ToString().Length;
