@@ -12,7 +12,7 @@ namespace FindMyPastTest.Tests
         [Fact]
         public void ShouldGenerateFirst10PrimeNumbers()
         {
-            var expected = new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 31 };
+            var expected = new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
             var target = new PrimeNumberGenerator();
 
             var actual = target.Generate().Take(10).ToArray();
