@@ -4,27 +4,23 @@ namespace FindMyPastTest
 {
     public class MultiplicationTable
     {
-        private int[] v;
-
-        public MultiplicationTable(int[] v)
+        public MultiplicationTable(int[] numbers)
         {
-            this.v = v;
+            this.Header = numbers;
         }
 
         public int this[int column, int row]
         {
             get
             {
-                throw new NotImplementedException();
+                return this.Header[column] * this.Header[row];
             }
         }
 
         public int[] Header
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            private set;
         }
     }
 }
